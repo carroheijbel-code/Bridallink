@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './WeddingPlanner'
+import App from './WeddingPlanner';
 import './styles/globals.css'
 
 // Error boundary for the entire app
