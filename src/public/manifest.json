@@ -1,0 +1,22 @@
+{
+  "name": "BridalLink - Wedding Planner",
+  "short_name": "BridalLink",
+  "description": "Complete wedding planning solution with budget tracking, guest management, and timeline tools",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fdf2f8",
+  "theme_color": "#f43f5e",
+  "categories": ["lifestyle", "productivity"],
+  "lang": "en-GB",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

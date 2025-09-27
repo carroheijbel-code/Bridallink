@@ -1,0 +1,1 @@
+// Empty server file for webpack compatibility

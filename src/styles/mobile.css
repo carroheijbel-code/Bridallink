@@ -1,0 +1,136 @@
+/* Mobile App Specific Styles */
+
+/* Safe area support for iOS */
+.mobile-app {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Prevent zoom on inputs (iOS Safari) */
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+/* Touch-friendly interactive elements */
+button, .button, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+/* Improved touch targets for mobile */
+.mobile-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prevent text selection on UI elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Better scrolling on iOS */
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbars on mobile for cleaner look */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Capacitor status bar spacing */
+.capacitor-statusbar-safe-area {
+  padding-top: var(--ion-safe-area-top, 0);
+}
+
+/* Prevent bounce scrolling on iOS */
+.no-bounce {
+  overscroll-behavior: none;
+}
+
+/* Full height container for mobile apps */
+.mobile-container {
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height */
+  overflow: hidden;
+}
+
+/* Keyboard safe area */
+.keyboard-safe {
+  padding-bottom: env(keyboard-inset-height, 0);
+}
+
+/* Mobile-optimized card spacing */
+@media (max-width: 768px) {
+  .mobile-card {
+    margin: 0.5rem;
+    border-radius: 12px;
+  }
+  
+  .mobile-padding {
+    padding: 1rem;
+  }
+  
+  .mobile-gap {
+    gap: 0.75rem;
+  }
+}
+
+/* Loading states optimized for mobile */
+.mobile-loading {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile navigation improvements */
+.mobile-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Better focus states for mobile */
+.mobile-focus:focus {
+  outline: 2px solid #f43f5e;
+  outline-offset: 2px;
+}
+
+/* Optimized shadows for mobile */
+.mobile-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .mobile-app {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

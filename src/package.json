@@ -1,0 +1,71 @@
+{
+  "name": "bridallink",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Complete wedding planning companion",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:clean": "rm -rf dist && npm run build",
+    "build:safe": "vite build --mode production",
+    "build:netlify": "npm install --legacy-peer-deps && npm run build:safe",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit",
+    "deploy:netlify": "bash deploy.sh",
+    "deploy:test": "npm run build && echo 'Build complete - ready for Netlify!'",
+    "mobile:setup": "node mobile-scripts.js setup",
+    "mobile:ios": "node mobile-scripts.js ios",
+    "mobile:android": "node mobile-scripts.js android",
+    "mobile:build": "node mobile-scripts.js build",
+    "mobile:doctor": "node mobile-scripts.js doctor",
+    "build:mobile": "npm run build && npx cap sync",
+    "dev:ios": "npx cap run ios --livereload",
+    "dev:android": "npx cap run android --livereload"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1",
+    "recharts": "^2.8.0",
+    "react-slick": "^0.29.0",
+    "react-responsive-masonry": "^2.1.7",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "motion": "^10.16.4",
+    "sonner": "^2.0.3",
+    "react-hook-form": "^7.55.0",
+    "@supabase/supabase-js": "^2.38.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^4.0.0-alpha.25",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "keywords": [
+    "wedding",
+    "planning",
+    "bride",
+    "groom",
+    "marriage",
+    "event"
+  ],
+  "author": "BridalLink",
+  "license": "MIT",
+  "homepage": "https://www.bridallink.co.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/bridallink"
+  }
+}
